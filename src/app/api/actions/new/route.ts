@@ -49,7 +49,7 @@ export async function GET(req: NextRequest) {
 						},
 						{
 							name: "lie",
-							label: "Say a super convincing lie",
+							label: "Now, the super convincing lie",
 							required: true,
 						},
 					],
