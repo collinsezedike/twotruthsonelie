@@ -34,22 +34,22 @@ export async function GET(req: NextRequest) {
 					parameters: [
 						{
 							name: "username",
-							label: "Enter your name or what your friends know you as",
+							label: "Enter your name",
 							required: true,
 						},
 						{
 							name: "truth1",
-							label: "Enter the first truth about yourself. An usual character, maybe, to deceive them",
+							label: "Drop a deceptive truth about yourself",
 							required: true,
 						},
 						{
 							name: "truth2",
-							label: "Enter another truth about yourself. Try to trick them with this one",
+							label: "Tell another tricky truth",
 							required: true,
 						},
 						{
 							name: "lie",
-							label: "Now, drop this lie. Make it as convincing as possible",
+							label: "Say a super convincing lie",
 							required: true,
 						},
 					],
