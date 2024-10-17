@@ -59,16 +59,16 @@ export const POST = async (
 				type: "completed",
 				title: "Correct!",
 				icon: `${new URL(req.url).origin}/twotruthonelie.jpg`,
-				label: "Correct!",
-				description: `You got the lie correctly.\n\nScreenshot and send to ${username} to prove yourself.`,
+				label: "Game over!",
+				description: `You got the lie correctly. Screenshot and send to ${username} to prove yourself.`,
 			};
 		} else {
 			payload = {
 				type: "completed",
 				title: "Wrong!",
 				icon: `${new URL(req.url).origin}/twotruthonelie.jpg`,
-				label: "Failed!",
-				description: `Doesn't seem like you know ${username} so well.`,
+				label: "Game over!",
+				description: `Doesn't seem like you know ${username} so well. 👀`,
 			};
 		}
 
