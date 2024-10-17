@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Connection } from "@solana/web3.js";
-import { v4 as uuidv4 } from "uuid";
 import {
 	ActionError,
 	CompletedAction,
@@ -47,7 +46,6 @@ export const POST = async (
 			throw err;
 		}
 
-		const uid = uuidv4();
 		const url = new URL(req.url);
 		const username = url.searchParams.get("username");
 		const truth1 = url.searchParams.get("truth1");
@@ -62,7 +60,7 @@ export const POST = async (
 			throw new Error("Required fields are missing");
 		}
 
-		await saveNewGameData(username, truth1, truth2, lie);
+		const uid = await saveNewGameData(username, truth1, truth2, lie);
 
 		const payload: CompletedAction = {
 			type: "completed",

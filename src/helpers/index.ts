@@ -54,12 +54,12 @@ export const saveNewGameData = async (
 	await client.connect();
 	await client.hSet(uid, { username, truth1, truth2, lie });
 	await client.disconnect();
+	return uid;
 };
 
 export const fetchGameData = async (uid: string) => {
 	const client = await createRedisClient();
 	await client.connect();
-	console.log(await client.hGetAll(uid));
 	const { username, truth1, truth2, lie } = await client.hGetAll(uid);
 	await client.disconnect();
 	return { username, truth1, truth2, lie };

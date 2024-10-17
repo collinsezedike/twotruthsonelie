@@ -108,7 +108,7 @@ export async function POST(
 				links: {
 					next: {
 						type: "post",
-						href: `${URL_PATH}/play/confirm/${uid}?choice=${choice}`,
+						href: `${URL_PATH}/play/${uid}/confirm?choice=${choice}`,
 					},
 				},
 			},
