@@ -43,17 +43,17 @@ export async function GET(
 			actions: [
 				{
 					type: "transaction",
-					href: `${URL_PATH}/play/${uid}?choice={optionA}`,
+					href: `${URL_PATH}/play/${uid}?choice=${optionA}`,
 					label: `A is the lie`,
 				},
 				{
 					type: "transaction",
-					href: `${URL_PATH}/play/${uid}?choice={optionB}`,
+					href: `${URL_PATH}/play/${uid}?choice=${optionB}`,
 					label: `B is the lie`,
 				},
 				{
 					type: "transaction",
-					href: `${URL_PATH}/play/${uid}?choice={optionC}`,
+					href: `${URL_PATH}/play/${uid}?choice=${optionC}`,
 					label: `C is the lie`,
 				},
 			],
